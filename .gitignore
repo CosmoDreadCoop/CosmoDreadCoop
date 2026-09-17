@@ -1,0 +1,11 @@
+# Generated C# files
+/bin
+/obj
+
+# Editor files
+/.vscode
+/.vs
+/.idea
+
+# GitHub files
+/.github
