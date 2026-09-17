@@ -21,7 +21,7 @@ public class Plugin : BaseUnityPlugin
         CosmoLogger.LogInfo($"Loaded {PLUGIN_GUID} v{PLUGIN_VERSION}");
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         // Shut down steamworks
         Steamworks.SteamClient.Shutdown();
