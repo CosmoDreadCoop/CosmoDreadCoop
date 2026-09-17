@@ -26,6 +26,11 @@ internal static class CosmoLogger
         logSource.LogError(message);
     }
 
+    public static void LogFatal(object message)
+    {
+        logSource.LogFatal(message);
+    }
+
     public static void LogDebug(object message)
     {
         logSource.LogDebug(message);
