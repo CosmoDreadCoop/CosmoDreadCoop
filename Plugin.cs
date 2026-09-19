@@ -1,5 +1,9 @@
 ﻿using BepInEx;
+using CosmoDreadCoop.Components;
+using CosmoDreadCoop.Patches;
 using CosmoDreadCoop.Utils;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace CosmoDreadCoop;
 
@@ -11,6 +15,8 @@ public class Plugin : BaseUnityPlugin
     public const string PLUGIN_VERSION = "0.1.0";
 
     public const int APP_ID = 1256060;
+
+    public const int MAX_PLAYERS = 4;
     
     private void Awake()
     {
@@ -33,5 +39,11 @@ public class Plugin : BaseUnityPlugin
         // Prepare steamworks
         SteamAPILoader.LoadSteamAPI();
         Steamworks.SteamClient.Init(APP_ID, true);
+
+        // Initialize networking
+        Singleton<LobbyManager>.Get();
+
+        // Apply patches
+        IntroPatcher.Patch();
     }
 }
