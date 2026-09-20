@@ -3,8 +3,6 @@ using System.IO;
 using System.Reflection;
 using UnityEngine;
 
-// I'm not gonna lie I shamelessly copied all of this from BoneLabs Fusion
-
 namespace CosmoDreadCoop.Utils;
 
 public static class SteamAPILoader
