@@ -1,0 +1,2 @@
+Put the assemblies you need for namespaces in here.
+I'm only putting this here so everything else can be ignored.
